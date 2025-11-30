@@ -1,0 +1,1 @@
+sass --watch D:\RAMIM\PROJECT\KFAR\assets\scss\main.scss:D:\RAMIM\PROJECT\KFAR\assets\css\style.css

@@ -1,0 +1,301 @@
+@use '../../utils' as *;
+
+
+
+
+.spa{
+    padding-top: 55px;
+    padding-bottom: 115px;
+    background-color: var(--cream3-color);
+    position: relative;
+    @include breakpoint(max-lg){
+               padding-bottom: 80px
+            }
+    @include breakpoint(max-md){
+               padding-bottom: 45px
+            }
+    .container{
+                @include breakpoint(max-md){
+               padding: 0;
+            }
+    }
+    &-title{
+        max-width: 100%;
+        & h2{
+            line-height: 40px;
+            & br{
+                @include breakpoint(max-md){
+                    display: none;
+                }
+            }
+        }
+    }
+    &-vector{
+        position: absolute;
+        left: 0px;
+        bottom: -115px;
+        z-index: 1;
+        &.hebrew{
+            left: inherit;
+            right: 0;
+        
+        }
+    }
+    &-area{
+        @extend %d-flex,%justify-between;
+         @include breakpoint(max-xl){
+               gap: 40px;
+            }
+     
+        
+
+    }
+    &-left{
+            margin-top: 70px;
+            width: 400px;
+            text-align: center;
+            @include breakpoint(max-xl){
+               margin-top: 30px;
+            }
+            @include breakpoint(max-lg){
+               margin-top: 0;
+               width: 100%;
+               &.hebrew{
+                padding: 0 15px;
+               }
+
+            }
+             
+           
+             .sec-btn{
+                margin-top: 65px;
+                 @include breakpoint(max-lg){
+                 margin-top: 30px;
+                }
+            }
+           
+        }
+    
+    &-right{
+         max-width: 818px;
+         width: 100%;
+         border-radius: 10px;
+        @include breakpoint(max-md){
+            height: 400px;
+        }
+    }
+    &-text{
+        // @extend %d-flex,%item-center,%flex-col,%justify-center;
+        margin-right: 50px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        @include breakpoint(max-xl){
+            margin-right: 0;
+        }
+        &-title{
+            font-size: 23px;
+            line-height: 32px;
+            font-weight: 600;
+            font-family: $Qui;
+            color: var(--btn1-color);
+            letter-spacing: 3px;
+            display: block;
+        }
+        & p{
+            font-family: $Ass;
+            font-size: 16px;
+            line-height: 25px;
+            font-weight: 400;
+            color: var(--text-color);
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        .message-menu{
+            font-size: 15px;
+            line-height: 32px;
+            font-family: $Ass;
+            letter-spacing: 3px;
+            & img{
+                margin-right: 10px;
+            }
+            & a{
+                color: var(--text-color);
+                z-index: 991;
+                position: relative;
+
+            }
+
+        }
+    }
+    &-thumb-slider{
+        max-width: 818px;
+        width: 100%;
+        height: 500px;
+        margin-bottom: 0;
+        @include breakpoint(max-xl){
+            max-width: 600px;
+        }
+        @include breakpoint(max-lg){
+            max-width: 100%;
+            height: auto;
+        }
+             &.slick-dotted.slick-slider{
+            margin-bottom: 0;
+             @include breakpoint(max-lg){
+                height: 300px;
+            }
+            .slick-list{
+                height: 100%;
+                .slick-track{
+                    height: 100%;
+                }
+            }
+        }
+            .slick-dots{
+            bottom: 22px;
+            width: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            @include breakpoint(max-lg){
+                    bottom: inherit;
+                    top: 40px;
+                    }
+            &.slick-slider{
+                margin-bottom: 0;
+            }
+            & li{
+                & button{
+                    background-color: var(--white-color);
+                    display: block;
+                    padding: 0;
+                    height: 4px;
+                    width: 25px;
+                    &::before{
+                        display: none;
+                    }
+                }
+                &.slick-active{
+
+                    & button{
+                        background-color: var(--gray-color);
+                    }
+                }
+
+            }
+            
+           }
+    }
+    &-thumb{
+        width: 100%;
+        height: 100%;
+        &-item{
+            padding: 0 10px;
+        }
+    }
+    &-inner{
+        padding-bottom: 80px;
+        box-shadow: 0 4px 26px 0 #0000001b;
+    }
+    &-details{
+        &-left{
+            max-width: 586px;
+            @include breakpoint(max-lg){
+            max-width: 100%;
+            }
+            & p{
+                max-width: 486px;
+                font-size: 16px;
+                line-height: 25px;
+                font-weight: 400;
+                font-family: $Ass;
+                color: var(--text3-color);
+                margin-top: 48px;
+                margin-bottom: 40px;
+            }
+        }
+        &-right{
+             @include breakpoint(max-lg){
+                margin-top: 60px;
+            }
+            & h3{
+                font-family: $Ass;
+                font-size: 23px;
+                font-weight: 400;
+                line-height: 32px;
+                color: var(--text3-color);
+            }
+            & p{
+                // max-width: 486px;
+                padding: 0 40px;
+                font-size: 16px;
+                line-height: 25px;
+                font-weight: 400;
+                font-family: $Ass;
+                color: var(--text3-color);
+                margin-top: 20px;
+                margin-bottom: 35px;
+                @include breakpoint(max-xsm){
+                    padding: 0;
+                }
+            }
+        }
+        &-thumb1{
+            height: 550px;
+            border-radius: 10px;
+            @include breakpoint(max-xl){
+                height: 450px;
+            }
+            @include breakpoint(max-lg){
+                height: 450px;
+            }
+            @include breakpoint(max-md){
+                height: 350px;
+            }
+            @include breakpoint(max-sm){
+                height: 250px;
+            }
+            
+        }
+        &-thumb2{
+            height: 345px;
+            border-radius: 10px;
+            @include breakpoint(max-xl){
+                height: 295px;
+            }
+            @include breakpoint(max-sm){
+                height: 200px;
+            }
+            &:nth-last-child(1){
+                margin-top: 20px;
+            }
+        }
+        &-slider{
+            &-thumb{
+                width: 100%;
+                height: 407px;
+                border-radius: 10px;
+                 @include breakpoint(max-sm){
+                        height: 300px;
+                    }
+                & img{
+                    transition: $transition-4-ease;
+                }
+                &:hover{
+                    & img{
+                        transform: scale(1.07);
+                    }
+                }
+                &-item{
+                    margin: 0 9px;
+                    @include breakpoint(max-sm){
+                        // margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+@use "../../utils" as*;
+
+
+
+
+.gallery{
+    &-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 23px;
+        @include breakpoint(max-lg){
+            gap: 10px;
+        }
+        @include breakpoint(max-sm){
+            gap: 5px;
+        }
+        @include breakpoint(max-xsm){
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    &-thumb{
+        height: 200px;
+         @include breakpoint(max-lg){
+            height: 150px;
+        }
+         @include breakpoint(max-md){
+            height: 120px;
+        }
+         @include breakpoint(max-sm){
+            height: 100px;
+        }
+        &:nth-child(1){
+            grid-column: span 2;
+        }
+        // &:nth-child(2){
+        //     @include breakpoint(max-xsm){
+        //         grid-row: span 5;
+        //         height: 100%;
+        //     }
+        // }
+        // &:nth-child(4){
+        //     @include breakpoint(max-xsm){
+        //         grid-row: span 4;
+        //         height: 100%;
+        //     }
+        // }
+        &:nth-child(5){
+            grid-row: span 2;
+            height: 100%;
+            //  @include breakpoint(max-xsm){
+            //     grid-row: 6;
+            //     height: 100%;
+            // }
+        }
+        &:nth-child(6){
+            grid-column: span 2;
+            @include breakpoint(max-xsm){
+                grid-column: span 2;
+            }
+        }
+        // &:nth-child(7){
+        //     @include breakpoint(max-xsm){
+        //         grid-column: span 2;
+        //     }
+        // }
+        &:nth-child(10){
+            grid-column: span 2;
+        }
+        &:nth-child(14){
+            grid-row: span 2;
+            height: 100%;
+        }
+        &:nth-child(15){
+            grid-column: span 2;
+        }
+       
+    }
+}

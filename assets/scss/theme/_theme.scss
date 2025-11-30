@@ -1,0 +1,227 @@
+@use '../utils' as*;
+
+
+
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*---------------------------------
+	typography css start 
+---------------------------------*/
+
+
+
+
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+   & p {
+	margin: 0;
+	padding: 0;
+
+}
+a{
+	text-decoration: none;
+}
+}
+
+
+
+
+.sec-title{
+   max-width: 800px;
+   @include breakpoint(max-lg){
+    text-align: center;
+    padding: 0 50px;
+   }
+   @include breakpoint(max-lg){
+    text-align: center;
+    padding: 0 34px;
+   }
+   @include breakpoint(max-sm){
+    text-align: center;
+    padding: 0 ;
+   }
+    & h2{
+        font-family: $Qui;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 28px;
+        letter-spacing: 3%;
+        color: var(--title-color);
+        text-transform: uppercase;
+        @include breakpoint(max-md){
+            font-size: 30px;
+        }
+        @include breakpoint(max-sm){
+            font-size: 28px;
+            line-height: 30px;
+        }
+
+    }
+    & p{
+        font-family: $Ass;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0%;
+        color: var(--text-color);
+        margin-top: 20px;
+    }
+    &.heebo{
+      & h2{
+        font-family: $Heb;
+      }
+      & p{
+        font-family: $Heb;
+      }
+    }
+}
+
+
+.breadcumb{
+  width: 100%;
+  height: 470px;
+  @include breakpoint(max-lg){
+    height: 400px;
+  }
+  @include breakpoint(max-sm){
+    height: 300px;
+  }
+  @include breakpoint(max-xsm){
+    height: 250px;
+  }
+}
+
+
+@keyframes ri-jello {
+  0% {
+    transform: none;
+  }
+  11.1% {
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+  22.2% {
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+  33.3% {
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+  44.4% {
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+  55.5% {
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+  66.6% {
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+  77.7% {
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+  88.8% {
+    transform: skewX(0.09765625deg) skewY(0.09765625deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+
+
+.accordion{
+
+    .f-accordion-item{
+        background-color: #F7F7F7;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border-bottom: none;
+        border: 1px solid #F5F5F5;
+        .f-accordion-header{
+       
+            .f-accordion-button{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                border: none;
+                background-color: #F7F7F7;
+                padding: 39px 45px 36px 45px;
+                
+                & span{
+                    font-family: $Ari;
+                    font-weight: 500;
+                    font-style: Medium;
+                    font-size: 24px;
+                    line-height: 30px;
+                    letter-spacing: 0%;
+                    color: var(--black-clr);
+
+                }
+                & i{
+                        color: var(--blue-clr);
+                        transition: all 0.3s ease;
+                        transform: rotate(180deg);
+                        width: 30px;
+
+                }
+                &.collapsed{
+                    & i{
+                        color: var(--gray-clr);
+                        transform: rotate(90deg);
+                        height: 30px;
+                    }
+                    background-color: #FFFFFF;
+                }
+               
+            }
+        }
+    }
+
+
+    .f-accordion-body{
+         border-top: 1px solid #E5E5E9;
+         padding: 27px 0 47px 0;
+        margin: 0 45px;
+        & span{
+            font-family: $Ari;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0%;
+            color: var(--gray-clr);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

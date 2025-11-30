@@ -1,0 +1,89 @@
+@use '../../utils' as *;
+
+
+
+
+.video{
+    height: 530px;
+    z-index: 9;
+    @include breakpoint(max-md){
+        height: 400px;
+    }
+    &-area{
+         @extend %p-relative,%left-50,%d-flex,%item-end,%justify-center;
+        height: 100%;
+        z-index: 1;
+        
+        .video-play{
+            @extend %p-absolute,%left-50;
+            top: 144px;
+            opacity: 50%;
+            z-index: 9;
+             @include breakpoint(max-md){
+                    display: none;
+                }
+        }
+        .text{
+            max-width: 815px;
+            margin-bottom: 100px;
+            position: relative;
+            z-index: 9;
+             @include breakpoint(max-md){
+                    margin-bottom: 40px;
+                    padding: 0 40px;
+                }
+             @include breakpoint(max-xsm){
+                    margin-bottom: 40px;
+                    padding: 0 ;
+                }
+            & p{
+                font-family: $Qui;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 56px;
+                line-height: 28px;
+                letter-spacing: 1px;
+                color: var(--white-color);
+                @include breakpoint(max-lg){
+                    font-size: 34px;
+                    line-height: 45px;
+                    letter-spacing: 3px;
+                    text-align: center;
+                }
+            }
+            & a{
+                display: block;
+                margin-top: 40px;
+                font-family: $Ass;
+                font-weight: 700;
+                font-style: Bold;
+                font-size: 15px;
+                line-height: 28px;
+                letter-spacing:4px;
+                text-align: right;
+                text-transform: uppercase;
+                color: var(--cream-color);
+                transition: $transition-3-ease;
+                 @include breakpoint(max-md){
+                    text-align: center;
+                    margin-top: 84px;
+                }
+                &:hover{
+                    color: var(--white-color);
+                    font-weight: 800;
+                }
+            }
+            &.hebrew{
+                & a{
+                    text-align: left;
+                    margin-left: -70px;
+                     @include breakpoint(max-md){
+                    text-align: center;
+                    margin-left: 0;
+                    margin-top: 84px;
+                    }
+                }
+            }
+        }
+    }
+}

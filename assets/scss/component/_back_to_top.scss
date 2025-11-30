@@ -1,0 +1,48 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.2 Back to Top
+/*----------------------------------------*/
+
+
+
+#back-to-top-btn {
+  display: inline-block;
+  background-color: var(--pri-color);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+  opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition-5-ease;
+  z-index: 999;
+  & i{
+    color: var(--white-color);
+    transition: $transition-5-ease;
+  }
+}
+
+#back-to-top-btn:hover {
+  cursor: pointer;
+  border: 2px solid var(--yellow-color);
+  & i{
+    color: var(--yellow-color);
+  }
+}
+#back-to-top-btn:active {
+  background-color: #555;
+}
+#back-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+

@@ -1,0 +1,191 @@
+@use '../../utils' as *;
+@use '../../utils/mixin' as *;
+
+
+
+.footer{
+        padding: 77px 0 30px 0;
+    &-area{
+        @extend %d-flex, %justify-between;
+        @include breakpoint(max-lg){
+            display: block;
+            }
+    }
+    &-icon{
+        max-width: 320px;
+        height: 70px;
+        @include breakpoint(max-xl){
+            width: 280px;
+          
+            }
+             @include breakpoint(max-lg){
+            margin-left: 20px;
+            }
+        &.hebrew{
+          
+            @include breakpoint(max-lg){
+                max-width: 100%;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+    &-content{
+        margin-top: 30px;
+        @include breakpoint(max-lg){
+            margin-top: 50px;
+            }
+        & h3{
+            font-family: $Ass;
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: 0%;
+            color: #FCFAF7;
+        }
+        & a{
+            font-family: $Ass;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 17px;
+            line-height: 26px;
+            letter-spacing: 0%;
+            color: #FCFAF7;
+            transition: all 0.3s ease;
+            &:hover{
+                font-weight: 800;
+                color: #FBFAFA;
+            }
+
+        }
+        & p{
+            font-family: $Ass;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 17px;
+            line-height: 26px;
+            letter-spacing: 0%;
+            color: #FCFAF7;
+        }
+        & li{
+            font-family: $Ass;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 17px;
+            line-height: 26px;
+            letter-spacing: 0%;
+            color: #FCFAF7;
+            list-style: none;
+            margin: 2px 0;
+        }
+        .list{
+            @extend %d-flex;
+            &.hebrew{
+                justify-content: end;
+            }
+            & ul{
+                &:nth-child(1){
+                    margin-right: 50px;
+                    @include breakpoint(max-xl){
+                        margin-right: 20px;
+                        }
+                }
+            }
+        }
+        &.contact{
+            margin-left: 70px;
+           @include breakpoint(max-xl){
+            margin-left: 20px;
+            }
+           @include breakpoint(max-lg){
+            margin-left: 20px;
+            }
+            .social{
+                margin-top: 16px;
+                & i{
+                    margin-right: 15px;
+                }
+            }
+           
+        }
+        &.links{
+            margin-left: 50px;
+            @include breakpoint(max-xl){
+            margin-left: 30px;
+            }
+             @include breakpoint(max-lg){
+            margin-left: 20px;
+            }
+        }
+        &.friend{
+            margin-left: 40px;
+           
+            @include breakpoint(max-xl){
+            margin-left: 30px;
+            max-width: 220px;
+            }
+             @include breakpoint(max-lg){
+            margin-left: 20px;
+            }
+            .subscribe{
+                @extend %p-relative;
+                width: 100%;
+                height: 46px;
+                margin-top: 25px;
+                & input{
+                    background-color: transparent;
+                    border: 1px solid #FFFFFF1A;
+                    outline: none;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0 24px;
+                    color: #FBFAFA
+
+                }
+                & button{
+                    @extend %p-absolute;
+                    right: 16px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border: none;
+                    background-color: transparent;
+
+                }
+            }
+             &.hebrew{
+
+                margin-left: 0;
+                display: flex;
+                justify-content: end;
+                @include breakpoint(max-lg){
+                    max-width: 100%;
+                }
+                .subscribe{
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+    &-bottom{
+        & span {
+            display: inline-block;
+            font-family: $Ass;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 13px;
+            line-height: 25px;
+            letter-spacing: 0%;
+            text-align: center;
+            color:#FCFCFC ;
+            transition: all 0.3s ease;
+            & a{
+            color:#FCFCFC ;
+                &:hover{
+                    color: var(--yellow-clr);
+                }
+            }
+        }
+    }
+}
+

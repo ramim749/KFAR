@@ -1,0 +1,329 @@
+@use '../../utils' as *;
+
+
+
+.special{
+    box-shadow: 0 9px 26px 0 #00000012;
+   
+    &-area{
+        margin-bottom: 100px;
+         @include breakpoint(max-lg){
+                    margin-bottom: 70px;
+                }
+        
+       &.inner{
+        margin-bottom: 50px;
+       }
+    }
+    &-content{
+            @include breakpoint(max-lg){
+                &:nth-child(4){
+                    display: none;
+                }
+                &:nth-child(5){
+                    display: none;
+                }
+                &:nth-child(6){
+                    display: none;
+                }
+            }
+        }
+    &-item{
+            margin: 0 20px;
+            @include breakpoint(max-xl){
+                margin: 0 10px;
+            }
+            @include breakpoint(max-lg){
+                margin: 0;
+                margin-bottom: 50px;
+            }
+            &.inner{
+                margin: 0;
+                padding: 20px 20px 40px 20px;
+                border-radius: 10px;
+                transition: $transition-3-ease;
+                @include breakpoint(max-xl){
+                    padding: 10px 10px 25px 10px;
+                }
+                @include breakpoint(max-md){
+                    padding: 20px 20px 30px 20px;
+                }
+                @include breakpoint(max-xsm){
+                    padding: 20px 10px 30px 10px;
+                }
+                &:hover{
+                background-color: var(--cream-color);
+                }
+            }
+              &-title{
+                    font-family: $Ass;
+                    font-weight: 600;
+                    font-size: 23px;
+                    line-height: 32px;
+                    letter-spacing: 4px;
+                    color: var(--text3-color);
+                    text-transform: uppercase;
+                    @include breakpoint(max-xsm){
+                        font-size: 20px;
+                        letter-spacing: 2px;
+                    }
+                    &:hover{
+                        color: var(--btn2-color);
+                    }
+                }
+            &-text{
+                margin-top: 37px;
+                padding: 0 24px 0 11px;
+              @include breakpoint(max-xl){
+                padding: 0 10px;
+              }
+              @include breakpoint(max-xsm){
+                padding: 0;
+                margin-top: 20px
+              }
+                & p{
+                    font-family: $Ass;
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 16px;
+                    line-height: 26px;
+                    letter-spacing: 0%;
+                    color: var(--text-color);
+                    margin-top: 20px;
+                    margin-bottom: 50px;
+                    @include breakpoint(max-lg){
+                        margin-bottom: 30px;
+                    }
+                }
+                .sec-btn{
+                        & a{
+                            @include breakpoint(max-md){
+                                width: 100%;
+                            }
+                        }
+                    }
+            }
+
+            &:hover{
+                &-text{
+                    .sec-btn{
+                        & a{
+                            border: 1px solid var(--cream-color);
+                            color: var(--cream-color);
+                            background-color: var(--btn1-color);
+                            @include breakpoint(max-md){
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    &-thumb{
+        width: 100%;
+        height: 420px;
+        border-radius: 10px;
+        @include breakpoint(max-md){
+            height: 255px;
+        }
+        &-2{
+            height: 353px;
+            @include breakpoint(max-xl){
+                height: 320px;
+            }
+            @include breakpoint(max-xsm){
+                height: 250px;
+            }
+        }     
+               
+    }
+    .third-btn{
+        & a{
+            display: inline-block;
+            padding: 20px 50px;
+            background-color: var(--cream2-color);
+            border-radius: 5px;
+            color: var(--btn1-color);
+            font-family: $Ass;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            &:hover{
+                background-color: var(--btn2-color);
+                color: var(--cream-color);
+            }
+
+        }
+    }
+    &-banner{
+        height: 350px;
+        display: flex;
+        align-items: center;
+        &-text{
+            text-align: center;
+            padding: 200px;
+            font-size: 56px;
+            line-height: 57px;
+            font-weight: 400;
+            font-family: $Qui;
+            color: var(--white-color);
+            letter-spacing: 3px;
+            @include breakpoint(max-xl){
+                padding: 50px;
+            }
+            @include breakpoint(max-md){
+                padding: 20px;
+                font-size: 45px;
+                line-height: 50px;
+            }
+            @include breakpoint(max-sm){
+                padding: 0;
+                font-size: 38px;
+                line-height: 45px;
+            }
+            @include breakpoint(max-xsm){
+                padding: 0;
+                font-size: 34px;
+                line-height: 40px;
+            }
+        }
+    }
+     &-inner{
+        box-shadow: none;
+    }
+    &-details{
+        &-title{
+            max-width: 100%;
+        }
+        &-content{
+            padding: 50px 60px;
+            background-color: var(--cream2-color);
+            border-radius: 10px;
+            display: flex;
+            margin-bottom: 35px;
+            gap: 100px;
+            @include breakpoint(max-xl){
+                    gap: 40px;
+                    padding: 40px;
+                }
+            @include breakpoint(max-lg){
+                    flex-direction: column;
+                }
+            @include breakpoint(max-md){
+                    padding: 30px;
+                }
+            @include breakpoint(max-sm){
+                    padding: 20px;
+                }
+            @include breakpoint(max-xsm){
+                    padding: 20px 15px;
+                }
+            &:nth-child(2){
+                background-color: var(--cream3-color);
+                padding: 50px 60px 50px 100px;
+                justify-content: space-between;
+                 @include breakpoint(max-xl){
+                    padding: 40px;
+                }
+                 @include breakpoint(max-lg){
+                    flex-direction: column-reverse;
+                }
+                 @include breakpoint(max-md){
+                    padding: 30px;
+                }
+            @include breakpoint(max-sm){
+                    padding: 20px;
+                }
+            @include breakpoint(max-xsm){
+                    padding: 20px 15px;
+                }
+            }
+            &:nth-last-child(1){
+                margin-bottom: 0;
+            }
+            &-thumb{
+                max-width: 570px;
+                min-width: 450px;
+                height: 514px;
+                width: 100%;
+                border-radius: 10px;
+                 @include breakpoint(max-xl){
+                    height: 480px;
+                }
+                 @include breakpoint(max-lg){
+                    height: 450px;
+                    min-width: 100%;
+                }
+                 @include breakpoint(max-sm){
+                    height: 350px;
+                    min-width: 100%;
+                }
+                 @include breakpoint(max-xsm){
+                    height: 300px;
+                    min-width: 100%;
+                }
+            }
+            &-text{
+                // margin-left: 100px;
+                max-width: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 30px;
+            
+                 @include breakpoint(max-lg){
+                    max-width: 100%;
+                }
+                .title{
+                    font-family: $Ass;
+                    font-size: 23px;
+                    line-height: 32px;
+                    font-weight: 600;
+                    color: var(--text3-color);
+                    letter-spacing: 3px;
+                    display: block;
+                    margin-bottom: 25px;
+                    transition: $transition-3-ease;
+                    @include breakpoint(max-xsm){
+                        font-size: 20px;
+                        line-height: 28px;
+                        letter-spacing: 2px;
+                        margin-bottom: 20px;
+                    }
+                    &:hover{
+                        color: var(--btn2-color);
+                    }
+                }
+                & p{
+                    font-size: 16px;
+                    line-height: 25px;
+                    font-family: $Ass;
+                    color: var(--text3-color);
+                    font-weight: 400;
+                }
+            }
+        }
+    &-btn{
+        text-align: center;
+        margin-bottom: 100px;
+        margin-top: 75px;
+        & a{
+            font-size: 15px;
+            font-family: $Ass;
+            letter-spacing: 3px;
+            color: var(--text-color);
+            text-transform: uppercase;
+            transition: $transition-3-ease;
+            border-bottom: 1px solid var(--text-color);
+            &:hover{
+                color: var(--btn2-color);
+                border-bottom: none;
+            }
+        }
+    }
+    }
+}

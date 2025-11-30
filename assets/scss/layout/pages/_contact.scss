@@ -1,0 +1,351 @@
+@use '../../utils' as*;
+
+
+
+.contact{
+    &-area{
+        .container{
+        @include breakpoint (max-sm){
+            padding: 0;
+        }
+    }
+    }
+    &-wrapper{
+        display: flex;
+        height: 600px;
+        border-radius: 10px;
+         @include breakpoint(max-xl){
+            height: 500px;
+        }
+         @include breakpoint(max-lg){
+            flex-direction: column;
+            height: auto;
+        }
+    }
+    &-map{
+        min-width: 840px;
+        width: 100%;
+        height: 100%;
+        @include breakpoint(max-xl){
+            min-width: 550px;
+        }
+         @include breakpoint(max-lg){
+            height: 400px;
+        }
+         @include breakpoint(max-sm){
+            height: 300px;
+        }
+    }
+    &-us{
+        background-color: var(--cream2-color);
+        width: 100%;
+        height: 100%;
+        padding: 60px;
+         @include breakpoint(max-lg){
+            height: auto;
+            padding: 40px;
+        }
+         @include breakpoint(max-sm){
+            height: auto;
+            padding: 30px 20px;
+        }
+        &-title, & h3{
+            font-size: 26px;
+            font-weight: 600;
+            font-family: $Ass;
+            letter-spacing: 2px;
+            color: var(--btn1-color);
+            text-transform: uppercase;
+        }
+        & p{
+            font-family: $Ass;
+            font-size: 17px;
+            line-height: 31px;
+            color: var(--text2-color);
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            margin-top: 5px;
+        }
+        &-mail{
+            font-size: 16px;
+            color: var(--text2-color);
+            display: block;
+            line-height: 20px;
+            text-transform: lowercase;
+            font-family: $Ass;
+            &:hover{
+                color: var(--btn2-color);
+            }
+        }
+        .follow-us{
+            margin-top: 80px;
+             @include breakpoint(max-lg){
+            margin-top: 30px;
+            }
+            & a{
+                color: var(--text3-color);
+                margin: 0 6px;
+                transition: $transition-3-ease;
+                font-size: 20px;
+                line-height: 50px;
+                &:hover{
+                    color: var(--btn2-color);
+                }
+            }
+        }
+    }
+    &-form{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+         @include breakpoint(max-sm){
+                gap: 15px;
+              }
+        &-item{
+            width: 100%;
+            height: 62px;
+            position: relative;
+            @include breakpoint(max-sm){
+                height: 46px;
+              }
+               &-title{
+                    text-transform: capitalize;
+                    font-size: 16px ;
+                    font-weight: 400;
+                    font-family: $Ass;
+                    color: var(--text3-color);
+                    z-index: 991;
+                    position: absolute;
+                    left: 10px;
+                    top: -12px;
+                    background-color: var(--white-color);
+                    padding: 0 10px;
+                    // top: 50%;
+                    // transform: translateY(-50%);
+                }
+            & input{
+                width: 100%;
+                height: 100%;
+                border: 1px solid var(--border-color);
+                padding: 0 20px;
+                outline: 0;
+                z-index: 990;
+                &::placeholder{
+                    text-transform: capitalize;
+                    font-size: 16px ;
+                    font-weight: 400;
+                    font-family: $Ass;
+                    color: var(--text3-color);
+                    z-index: 991;
+                    transition: $transition-3-ease;
+                }
+                &:focus{
+                    outline: 1px solid var(--text3-color);
+                    // display: none;
+                    &::placeholder{
+                        display: none;
+                        font-size: 10px;
+                        font-size: 0;
+                    }
+                   &.contact-form-item-title{
+                        top: -40px;
+                    }
+                }
+                
+            }
+             
+            &:focus{
+                border: 1px solid var(--text3-color);
+                .title{
+                    transform: translateY(0);
+                    top: 0;
+
+                }
+            }
+            & textarea{
+                width: 100%;
+                height: 100%;
+            }
+            &:nth-last-child(4),&:nth-last-child(5){          
+              @include breakpoint(max-sm){
+                grid-column: span 2;
+              }
+            }
+            &:nth-last-child(3){          
+              grid-column: span 2;
+            }
+            &:nth-last-child(2){
+                grid-column: span 2;
+                height: 250px;
+                @include breakpoint(max-sm){
+                height: 200px;
+              }
+                & textarea{
+                padding: 20px;
+                    border: 1px solid var(--border-color);
+                &:focus{
+                    outline: 1px solid var(--text3-color);
+                    &::placeholder{
+                        font-size: 0;
+                    }
+                }
+
+                &::placeholder{
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    font-family: $Ass;
+                    color: var(--text3-color);
+                    transition: $transition-3-ease;
+                }
+
+                }
+            }
+            &:nth-last-child(1){
+                grid-column: span 2;
+                height: 46px;
+                & input{
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    color: var(--white-color);
+                    font-family: $Ass;
+                    font-size: 15px;
+                    font-weight: 700;
+                    background-color: var(--btn1-color);
+                    transition: $transition-3-ease;
+                    &:hover{
+                    background-color: var(--btn2-color);
+                }
+                }
+               
+            }
+        }
+    }
+    &.get-in-touch{
+        background-color: var(--cream3-color);
+    }
+}
+
+
+
+.mclub{
+    &-wrapper{
+        margin-bottom: 250px;
+        height: 900px;
+        display: flex;
+        justify-content: right;
+        &-area{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+        }
+    }
+    &-content{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1180px;
+        padding: 40px 60px 60px 60px;
+        gap: 20px;
+        width: 100%;
+        background-color: var(--pri-color); 
+        border-radius: 10px;
+        transform: translateY(100px);
+        @include breakpoint(max-lg){
+            flex-direction: column;
+        }
+        @include breakpoint(max-lg){
+            padding: 40px 30px;
+        }
+        
+        
+        &-logo{
+            margin-bottom: 50px;
+            @include breakpoint(max-sm){
+            margin-bottom: 20px;
+            }
+        }
+        &-text{
+            text-align: center;
+            max-width: 300px;
+            width: 100%;
+            @include breakpoint(max-lg){
+            max-width: 100%;
+            }
+            & p{
+                font-size: 16px;
+                line-height: 25px;
+                font-family: $Ass;
+                font-weight: 400;
+                color: var(--white-color);
+            }
+        }
+    }
+    &-form{
+        max-width: 622px;
+        width: 100%;
+        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+          @include breakpoint(max-sm){
+                gap: 15px;
+            }
+        @include breakpoint(max-xl){
+            max-width: 550px;
+        }
+        @include breakpoint(max-lg){
+           max-width: 100%;
+           margin-top: 30px;
+        }
+        &-item{
+            height: 60px;
+            width: 100%;
+            @include breakpoint(max-sm){
+                height: 46px;
+            }
+              & input{
+                height: 100%;
+                width: 100%;
+                 border: 1px solid var(--white-color);
+                 background-color: transparent;
+                 padding: 0 20px;
+                 outline: 0;
+                 color: var(--white-color);
+                 &::placeholder{
+                    font-size: 16px;
+                    color: var(--cream2-color);
+                    text-transform: capitalize;
+                 }
+                }
+            &:nth-last-child(1){
+                grid-column: span 2;
+                background-color: var(--white-color);
+               
+                & input{
+                    color: var(--text2-color);
+                    font-size: 15px;
+                    text-transform: uppercase;
+                }
+            }
+            &:nth-last-child(2){
+                grid-column: span 2;
+            }
+            &:nth-last-child(3),&:nth-last-child(4){
+               @include breakpoint(max-sm){
+                grid-column: span 2;
+               }
+            }
+        }
+      
+          
+    }
+    &-banner{
+        width: 100%;
+        height: 250px;
+        @include breakpoint(max-sm){
+            height: 150px;
+        }
+    }
+}

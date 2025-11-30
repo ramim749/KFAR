@@ -1,0 +1,169 @@
+@use '../../utils' as *;
+
+
+
+
+.sport{
+    margin-top: 72px;
+    &-title{
+        @extend %d-flex, %justify-center;
+        position: relative;
+        z-index: 9;
+        .sec-title{
+            max-width: 700px;
+        }
+       
+    }
+     &-area{
+        margin-top: 30px;
+          
+            
+            
+        }
+    &-content{
+        padding: 28px;
+        padding-top: 85px;
+        border-radius: 10px 10px 0 0;
+        @include breakpoint(max-xxl){
+            padding: 10px;
+            padding-top: 80px;
+        }
+        @include breakpoint(max-sm){
+             padding: 5px;
+             padding-top: 70px;
+        }
+        &-item{
+            padding-bottom: 36px;
+            margin: 0 8px;
+            border-radius: 15px;
+            transition: all 0.6s ease-in-out; 
+            &-title{
+                font-family: $Ass;
+                font-weight: 600;
+                font-size: 23px;
+                line-height: 32px;
+                letter-spacing: 3px;
+                color: var(--text3-color);
+                text-transform: uppercase;
+                transition: $transition-3-ease;
+                &:hover{
+                    color: var(--yellow-color);
+                }
+            }
+        }
+        &-thumb{
+            height: 370px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+            @include breakpoint(max-sm){
+                height: 300px;
+            }
+            &::after{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: black;
+                    opacity: 50%;
+                    left: 0;
+                    top: 0;
+                    z-index: 9;
+                    transition: all 0.6s ease;
+
+            }
+        }
+         &-text{
+            margin-top: 30px;
+           
+            & p{
+                margin-top: 20px;
+                font-family: $Ass;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 25px;
+                letter-spacing: 0%;
+                color: var(--text3-color);
+            }
+        }
+        &.slick-current{
+            background-color: var(--cream3-color);
+            .sport-content-item{
+                transform: translateY(-50px);
+            .sport-content-thumb{
+                &::after{
+                        opacity: 0;
+                    }
+                }
+            }
+
+        }
+    }          
+        &-bottom{
+            position: relative;
+            z-index: 1;
+            .content{
+                text-align: center;
+                & p{
+                    font-family: $Qui;
+                    font-weight: 300;
+                    font-style: Light;
+                    font-size: 23px;
+                    line-height: 32px;
+                    letter-spacing:4px;
+                    text-align: center;
+                    color: var(--white-color);
+                    & a{
+                        color:#47ACAB;
+                        font-weight: 600;
+                    }
+                }
+                .sport-btn{
+                    & a{
+                        margin-top: 47px;
+                        margin-bottom: 30px;
+                        display: inline-block;
+                        padding: 17px 33px;
+                        font-family: $Ass;
+                        font-weight: 600;
+                        font-size: 15px;
+                        letter-spacing: 3px;
+                        text-transform: uppercase;
+                        background-color: #FDC743;
+                        color: #171818;
+                        border-radius: 5px;
+                        transition: $transition-3-ease;
+                        &:hover{
+                            background-color: transparent;
+                            color: var(--cream3-color);
+                            border: 1px solid var(--cream3-color);
+                        }
+
+                    }
+                }
+            }
+            .sport-icon{
+                margin-bottom: 30px;
+                margin-left: 50%;
+                position: relative;
+                border-radius: 100%;
+                width: 111px;
+                z-index: 9;
+                transform: translate(-50%,-20px);
+                & img{
+                    z-index: 9;
+                    position: relative;
+                }
+                .circle{
+                    position: absolute;
+                   background-color:  #302E2A;
+                   width: 111px;
+                   height: 111px;
+                   left: 0px;
+
+                   top: -11px;
+                   border-radius: 100%;
+                    z-index: 1;
+                }
+            }
+        }
+}
